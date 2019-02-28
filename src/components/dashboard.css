@@ -1,0 +1,28 @@
+:local(.gridLayout) {
+  display: grid;
+  grid-template-columns: 70% auto;
+  grid-gap: 20px;
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+}
+
+:local(.subGridLayout) {
+  display: grid;
+  grid-template-rows: 40% auto;
+  height: 100vh;
+  width: 100%;
+}
+
+:local(.topLeftContainer) {
+  overflow: auto;
+}
+
+:local(.rightContainer) {
+  overflow: auto;
+}
+
+:local(.bottomLeftContainer) {
+  height: 100%;
+  width: 100%;
+}
