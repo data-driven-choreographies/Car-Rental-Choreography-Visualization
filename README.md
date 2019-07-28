@@ -1,5 +1,9 @@
 # Blockchain Choreography Frontend
 
+## Screencast
+
+A screencast of the running project can be downloaded [here](https://github.com/data-driven-choreographies/Car-Rental-Choreography-Visualization/blob/master/screencast/Screencast.mp4).
+
 ## Installation
 
 ### Ganache
