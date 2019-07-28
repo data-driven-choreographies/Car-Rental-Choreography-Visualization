@@ -3,7 +3,7 @@
 ## Installation
 
 ### Ganache
- 
+
 ```bash
 sudo npm install ganache-cli -g
 ```
@@ -23,7 +23,7 @@ Init truffle project in new folder (`truffleproject/`):
 ```bash
 truffle init
 ```
-Add contract to `contracts/` folder and migration (2_deploy_contracts.js) to `migrations/` folder.
+Add contract to `contracts/` folder and migration (2_deploy_contracts.js) to `migrations/` folder. An example for a complete truffle project can be found [here](https://github.com/data-driven-choreographies/Smart-Contracts).
 
 Compile contract:
 
@@ -48,7 +48,7 @@ sudo truffle migrate
 Create symlink for the smart contracts:
 
 ```bash
-ln -s truffleproject/build/contracts blockchain-choreography/src/contracts
+ln -s ./truffleproject/build/contracts ./Car-Rental-Choreography-Visualization/src/contracts
 ```
 
 

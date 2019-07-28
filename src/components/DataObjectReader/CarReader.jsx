@@ -11,10 +11,9 @@ class CarReader extends React.Component {
       // let drizzle know we want to watch the `myString` method
       const idDK = contract.methods["getId"].cacheCall(instanceId);
       const preparedCarIdDK = contract.methods["getPreparedCarId"].cacheCall(instanceId);
-      const requestCarPreparationDoneDK = contract.methods["getRequestCarPreparationDone"].cacheCall(instanceId);
 
       // save the `dataKey` to local component state for later reference
-      this.setState({ idDK, preparedCarIdDK, requestCarPreparationDoneDK });
+      this.setState({ idDK, preparedCarIdDK });
     }
 
     render() {
@@ -25,7 +24,6 @@ class CarReader extends React.Component {
       // using the saved `dataKey`, get the variable we're interested in
       const id = Car.getId[this.state.idDK];
       const preparedCarId = Car.getPreparedCarId[this.state.preparedCarIdDK];
-      const requestCarPreparationDone = Car.getRequestCarPreparationDone[this.state.requestCarPreparationDoneDK];
       // if it exists, then we display its value
       //return <p>My stored string: {myString && myString.value}</p>;
       return <div>
@@ -33,7 +31,6 @@ class CarReader extends React.Component {
           <p style={{color: '#999999'}}>{address}</p>
           <p>Id: {id && id.value.toString()}</p>
           <p>PreparedCarId: {preparedCarId && preparedCarId.value.toString()}</p>
-          <p>RequestedCarPreparationDone: {requestCarPreparationDone && requestCarPreparationDone.value.toString()}</p>
         </Card>
       </div>
     }
